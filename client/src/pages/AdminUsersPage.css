@@ -1,0 +1,108 @@
+.admin-users {
+  padding: 1.5rem 0 3rem;
+  background: var(--color-off-white);
+}
+
+.admin-users__title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--color-forest);
+}
+
+.users-table-wrap {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.users-table th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.users-table td {
+  padding: 1rem 1.5rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  vertical-align: middle;
+}
+
+.users-table tr:last-child td {
+  border-bottom: none;
+}
+
+.user-role-badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.05em;
+}
+
+.user-role-badge--admin {
+  background: var(--color-beige);
+  color: var(--color-forest);
+  border: 1px solid var(--color-border);
+}
+
+.user-role-badge--user {
+  background: var(--color-off-white);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+}
+
+.user-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.user-action-btn {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.user-action-btn--role {
+  background: var(--color-off-white);
+  color: var(--color-forest);
+  border: 1px solid var(--color-border);
+}
+
+.user-action-btn--role:hover:not(:disabled) {
+  background: var(--color-beige);
+  border-color: var(--color-forest);
+}
+
+.user-action-btn--delete {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fee2e2;
+}
+
+.user-action-btn--delete:hover:not(:disabled) {
+  background: #fee2e2;
+  border-color: #ef4444;
+}
+
+.user-action-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

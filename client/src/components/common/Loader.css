@@ -1,0 +1,22 @@
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3rem;
+}
+
+.loader__spinner {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 3px solid var(--color-beige);
+  border-top-color: var(--color-forest);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+.loader__text {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}

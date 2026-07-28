@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Brand — PROJECT_CONTEXT palette */
+  --color-forest: #2f5d50;
+  --color-forest-light: #3d7566;
+  --color-sage: #6f8f7f;
+  --color-beige: #f4efe7;
+  --color-off-white: #faf8f4;
+  --color-white: #ffffff;
+  --color-text: #2b2b2b;
+  --color-text-muted: #64748b;
+  --color-border: #e7dfd3;
+
+  /* Surfaces */
+  --bg-page: var(--color-off-white);
+  --color-surface: var(--color-white);
+  --color-header-bg: rgba(250, 248, 244, 0.94);
+
+  /* Accent — sage-toned, no gold gradients */
+  --color-accent: var(--color-sage);
+  --color-accent-dark: var(--color-forest);
+
+  /* Shadows */
+  --shadow-soft: 0 2px 12px rgba(47, 93, 80, 0.06);
+  --shadow-card: 0 4px 20px rgba(47, 93, 80, 0.08);
+  --shadow-lg: 0 12px 36px rgba(47, 93, 80, 0.1);
+
+  /* Status */
+  --color-error: #dc2626;
+  --color-success: #16a34a;
+
+  /* Fonts */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Poppins', system-ui, sans-serif;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Misc */
+  --transition: 0.2s ease;
+  --container: 1200px;
+  --header-height: 72px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-sage);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.section-subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.page-hero {
+  background: var(--color-beige);
+  border-bottom: 1px solid var(--color-border);
+  padding: 3rem 0 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.page-hero__title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 0.5rem;
+}
+
+.page-hero__subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  max-width: 520px;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--color-beige);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-forest);
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--color-forest);
+}
+
+.toast__close {
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--color-text-muted);
+  padding: 0.25rem;
+}
+
+.toast__close:hover {
+  color: var(--color-forest);
+}
+
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .section { padding: 3.5rem 0; }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

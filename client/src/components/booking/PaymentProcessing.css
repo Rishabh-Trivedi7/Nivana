@@ -1,0 +1,76 @@
+.payment-processing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.payment-processing__ring {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.payment-processing__spinner {
+  position: absolute;
+  inset: 0;
+  border: 4px solid var(--color-beige);
+  border-top-color: var(--color-forest);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.payment-processing__icon {
+  font-size: 1.75rem;
+  z-index: 1;
+}
+
+.payment-processing__title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--color-forest);
+  margin-bottom: 0.5rem;
+  min-height: 2rem;
+  transition: all 0.3s ease;
+}
+
+.payment-processing__subtitle {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+
+.payment-processing__bar-track {
+  width: 100%;
+  max-width: 320px;
+  height: 6px;
+  background: var(--color-beige);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.payment-processing__bar-fill {
+  height: 100%;
+  background: var(--color-forest);
+  border-radius: var(--radius-full);
+  transition: width 0.8s ease-in-out;
+}
+
+.payment-processing__secure-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-beige);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  color: var(--color-forest);
+  font-weight: 500;
+}

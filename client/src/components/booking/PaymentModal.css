@@ -1,0 +1,300 @@
+.payment-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 22, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  animation: fadeIn 0.25s ease;
+}
+
+.payment-modal {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 760px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  border: 1px solid var(--color-border);
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.payment-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.75rem;
+  background: var(--color-beige);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.payment-modal__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.payment-modal__logo-mark {
+  font-size: 1.2rem;
+}
+
+.payment-modal__logo-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-forest);
+  letter-spacing: 0.02em;
+}
+
+.payment-modal__close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+}
+
+.payment-modal__close-btn:hover {
+  color: var(--color-forest);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.payment-modal__content {
+  padding: 1.75rem;
+}
+
+.payment-modal__title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--color-forest);
+  margin-bottom: 0.35rem;
+}
+
+.payment-modal__subtitle {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.payment-modal__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.payment-modal__section-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-forest);
+  margin-bottom: 1rem;
+  font-family: var(--font-body);
+  letter-spacing: 0.02em;
+}
+
+/* Payment Methods */
+.payment-methods-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.payment-method-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.9rem 1rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  cursor: pointer;
+  transition: all var(--transition);
+  position: relative;
+}
+
+.payment-method-card:hover {
+  border-color: var(--color-sage);
+  background: var(--color-off-white);
+}
+
+.payment-method-card--selected {
+  border-color: var(--color-forest);
+  background: #f4efe7;
+  box-shadow: 0 2px 8px rgba(47, 93, 80, 0.08);
+}
+
+.payment-method-card__icon {
+  font-size: 1.4rem;
+}
+
+.payment-method-card__info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.payment-method-card__name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.payment-method-card__desc {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.payment-method-card__radio {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--color-sage);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-method-card--selected .payment-method-card__radio {
+  border-color: var(--color-forest);
+}
+
+.payment-method-card__radio-inner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-forest);
+}
+
+/* Booking Summary Card */
+.booking-summary-card {
+  background: var(--color-beige);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.booking-summary-card__property {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.booking-summary-card__img {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+.booking-summary-card__name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--color-forest);
+  line-height: 1.2;
+}
+
+.booking-summary-card__loc {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin-top: 0.2rem;
+}
+
+.booking-summary-card__divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: 1rem 0;
+}
+
+.booking-summary-card__dates {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-white);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.booking-summary-card__date-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-summary-card__date-lbl {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-sage);
+  font-weight: 600;
+}
+
+.booking-summary-card__date-val {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.booking-summary-card__date-arrow {
+  color: var(--color-sage);
+  font-size: 1.1rem;
+}
+
+.booking-summary-card__breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+}
+
+.booking-summary-card__row {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text-muted);
+}
+
+.booking-summary-card__row--total {
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1.5px dashed var(--color-border);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-forest);
+}
+
+.payment-modal__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.payment-modal__guarantee {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 680px) {
+  .payment-modal__layout {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}

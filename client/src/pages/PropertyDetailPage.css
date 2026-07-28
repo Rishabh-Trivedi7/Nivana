@@ -1,0 +1,127 @@
+.property-detail {
+  padding: 2rem 0 4rem;
+}
+
+.property-detail__back {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+  transition: color var(--transition);
+}
+
+.property-detail__back:hover {
+  color: var(--color-forest);
+}
+
+.property-detail__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.property-detail__category {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-sage);
+}
+
+.property-detail__title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  margin: 0.35rem 0 0.25rem;
+}
+
+.property-detail__location {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+.property-detail__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.property-detail__layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  align-items: start;
+}
+
+.property-detail__section {
+  margin-bottom: 2.5rem;
+}
+
+.property-detail__section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.property-detail__description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  white-space: pre-line;
+}
+
+.property-detail__error {
+  padding: 4rem 1.25rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .property-detail__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .property-detail__sidebar {
+    order: -1;
+  }
+}
+
+.property-detail__title-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.property-detail__wishlist-btn {
+  background: var(--color-beige);
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  color: var(--color-forest);
+}
+
+.property-detail__wishlist-btn:hover {
+  background: var(--color-white);
+  border-color: var(--color-forest);
+}
+
+.property-detail__wishlist-btn--active {
+  background: #fdf2f2;
+  border-color: #fca5a5;
+  color: #dc2626;
+}
+
+.property-detail__wishlist-btn--active:hover {
+  background: #fee2e2;
+  border-color: #ef4444;
+}

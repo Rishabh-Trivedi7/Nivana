@@ -1,0 +1,29 @@
+.property-filters {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  height: fit-content;
+  position: sticky;
+  top: calc(var(--header-height) + 1rem);
+}
+
+.property-filters__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.property-filters__title {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .property-filters {
+    position: static;
+  }
+}

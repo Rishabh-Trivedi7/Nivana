@@ -1,0 +1,123 @@
+.admin-bookings {
+  padding: 1.5rem 0 3rem;
+  background: var(--color-off-white);
+}
+
+.admin-bookings__title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--color-forest);
+}
+
+.bookings-table-wrap {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.bookings-table th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.bookings-table td {
+  padding: 1.25rem 1.5rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  vertical-align: middle;
+}
+
+.bookings-table tr:last-child td {
+  border-bottom: none;
+}
+
+.booking-user-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-user-cell__name {
+  font-weight: 500;
+  color: var(--color-forest);
+}
+
+.booking-user-cell__email {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.booking-dates-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-dates-cell__range {
+  font-weight: 500;
+}
+
+.booking-dates-cell__nights {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.booking-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.booking-action-btn {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all var(--transition);
+}
+
+.booking-action-btn--confirm {
+  background: #d1fae5;
+  color: #059669;
+  border-color: #a7f3d0;
+}
+
+.booking-action-btn--confirm:hover {
+  background: #059669;
+  color: var(--color-white);
+}
+
+.booking-action-btn--complete {
+  background: #e0f2fe;
+  color: #0284c7;
+  border-color: #bae6fd;
+}
+
+.booking-action-btn--complete:hover {
+  background: #0284c7;
+  color: var(--color-white);
+}
+
+.booking-action-btn--cancel {
+  background: #fee2e2;
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+.booking-action-btn--cancel:hover {
+  background: #dc2626;
+  color: var(--color-white);
+}

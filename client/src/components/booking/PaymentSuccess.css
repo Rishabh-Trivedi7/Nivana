@@ -1,0 +1,120 @@
+.payment-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.payment-success__badge {
+  width: 64px;
+  height: 64px;
+  background: #f0fdf4;
+  border: 2px solid #bbf7d0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.payment-success__checkmark {
+  font-size: 2rem;
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.payment-success__tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #16a34a;
+  margin-bottom: 0.25rem;
+}
+
+.payment-success__title {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  color: var(--color-forest);
+  margin-bottom: 0.35rem;
+}
+
+.payment-success__subtitle {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  max-width: 380px;
+  margin-bottom: 1.5rem;
+}
+
+.payment-success__card {
+  width: 100%;
+  background: var(--color-beige);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.payment-success__txn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.payment-success__label {
+  color: var(--color-text-muted);
+}
+
+.payment-success__code {
+  font-family: monospace;
+  font-weight: 600;
+  background: var(--color-white);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  color: var(--color-forest);
+  letter-spacing: 0.05em;
+}
+
+.payment-success__divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: 1rem 0;
+}
+
+.payment-success__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  font-size: 0.88rem;
+}
+
+.payment-success__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-success__val {
+  font-weight: 500;
+  color: var(--color-text);
+  margin-top: 0.15rem;
+}
+
+.payment-success__val--highlight {
+  color: var(--color-forest);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.payment-success__actions {
+  width: 100%;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}

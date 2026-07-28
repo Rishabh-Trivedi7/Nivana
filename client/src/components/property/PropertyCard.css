@@ -1,0 +1,147 @@
+.property-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.property-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.property-card__image-wrap {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.property-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.property-card:hover .property-card__image {
+  transform: scale(1.05);
+}
+
+.property-card__badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: var(--color-sage);
+  color: var(--color-forest);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.property-card__body {
+  padding: 1.25rem;
+}
+
+.property-card__category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-sage);
+}
+
+.property-card__title {
+  font-size: 1.1rem;
+  margin: 0.35rem 0 0.25rem;
+  transition: color var(--transition);
+}
+
+.property-card__title:hover {
+  color: var(--color-forest-light);
+}
+
+.property-card__location {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.property-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.property-card__rating {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-forest);
+}
+
+.property-card__rating span:first-child {
+  color: #f59e0b;
+  margin-right: 0.2rem;
+}
+
+.property-card__reviews {
+  font-weight: 400;
+  color: var(--color-text-muted);
+  margin-left: 0.15rem;
+}
+
+.property-card__new {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.property-card__price {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-forest);
+}
+
+.property-card__price span {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.property-card__wishlist {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition), background var(--transition);
+  z-index: 2;
+}
+
+.property-card__wishlist:hover {
+  transform: scale(1.1);
+  background: var(--color-white);
+}
+
+.property-card__wishlist-icon {
+  font-size: 1.1rem;
+  color: var(--color-sage);
+  transition: color var(--transition);
+  line-height: 1;
+}
+
+.property-card__wishlist--active .property-card__wishlist-icon {
+  color: #dc2626;
+}

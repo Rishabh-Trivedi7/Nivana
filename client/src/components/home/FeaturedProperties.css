@@ -1,0 +1,17 @@
+.featured {
+  background: var(--color-white);
+}
+
+.featured__grid {
+  margin-bottom: 2.5rem;
+}
+
+.featured__cta {
+  text-align: center;
+}
+
+.featured__error {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: 2rem;
+}
